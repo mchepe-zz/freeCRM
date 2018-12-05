@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="112964" started-at="2018-12-05T19:02:40Z" finished-at="2018-12-05T19:04:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="112964" started-at="2018-12-05T19:02:40Z" finished-at="2018-12-05T19:04:33Z">
+      <class name="Deals_TC.LoginPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="setup" is-config="true" duration-ms="15065" started-at="2018-12-05T19:02:40Z" finished-at="2018-12-05T19:02:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="LoginTestUsingPropertyValues()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="LoginTestUsingPropertyValues" duration-ms="11406" started-at="2018-12-05T19:02:55Z" finished-at="2018-12-05T19:03:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTestUsingPropertyValues -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="tearDown" is-config="true" duration-ms="869" started-at="2018-12-05T19:03:07Z" finished-at="2018-12-05T19:03:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="setup" is-config="true" duration-ms="18144" started-at="2018-12-05T19:03:09Z" finished-at="2018-12-05T19:03:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="LoginWithInvalidCred(java.lang.String, java.lang.String)[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="LoginWithInvalidCred" duration-ms="4198" started-at="2018-12-05T19:03:27Z" data-provider="invalidCredentials" finished-at="2018-12-05T19:03:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invaliduser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithInvalidCred -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="tearDown" is-config="true" duration-ms="818" started-at="2018-12-05T19:03:31Z" finished-at="2018-12-05T19:03:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="setup" is-config="true" duration-ms="13434" started-at="2018-12-05T19:03:32Z" finished-at="2018-12-05T19:03:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="LoginWithInvalidCred(java.lang.String, java.lang.String)[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="LoginWithInvalidCred" duration-ms="3692" started-at="2018-12-05T19:03:45Z" data-provider="invalidCredentials" finished-at="2018-12-05T19:03:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[invalidpass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithInvalidCred -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="tearDown" is-config="true" duration-ms="898" started-at="2018-12-05T19:03:49Z" finished-at="2018-12-05T19:03:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="setup" is-config="true" duration-ms="13691" started-at="2018-12-05T19:03:50Z" finished-at="2018-12-05T19:04:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="LoginWithInvalidCred(java.lang.String, java.lang.String)[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="LoginWithInvalidCred" duration-ms="4037" started-at="2018-12-05T19:04:03Z" data-provider="invalidCredentials" finished-at="2018-12-05T19:04:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invaliduser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[invalidpass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithInvalidCred -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="tearDown" is-config="true" duration-ms="937" started-at="2018-12-05T19:04:07Z" finished-at="2018-12-05T19:04:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="setup" is-config="true" duration-ms="12926" started-at="2018-12-05T19:04:08Z" finished-at="2018-12-05T19:04:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="LoginWithValidCred(java.lang.String, java.lang.String)[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="LoginWithValidCred" duration-ms="10873" started-at="2018-12-05T19:04:21Z" data-provider="validCredentials" finished-at="2018-12-05T19:04:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mayurc]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithValidCred -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Deals_TC.LoginPageTest@3f49dace]" name="tearDown" is-config="true" duration-ms="954" started-at="2018-12-05T19:04:32Z" finished-at="2018-12-05T19:04:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Deals_TC.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

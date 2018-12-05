@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="88.881519">
+<testcase classname="Login to Free CRM website" name="Verify successful Login in Free CRM website." time="62.53796">
+<system-out><![CDATA[Given User is on Free CRM Login Page........................................passed
+When user enter username as "mayurc"........................................passed
+And user enter password as "test@123".......................................passed
+And user click on login button..............................................passed
+Then User should be able to log into Free CRM website successfully..........passed
+Then User closes the browser................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login to Free CRM website" name="Verify user is not able to login with invalid credentials" time="26.343559">
+<system-out><![CDATA[Given User is on Free CRM Login Page........................................passed
+When user enter username as "mayurc"........................................passed
+And user enter password as "invalidpass"....................................passed
+And user click on login button..............................................passed
+Then User should not be able to log into Free CRM website...................passed
+Then User closes the browser................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
