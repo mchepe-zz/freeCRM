@@ -4,7 +4,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import Functions.Deals;
 import Functions.TestBase;
 import Pages.DealsPage;
 import Pages.HomePage;
@@ -34,14 +33,13 @@ public class EditDeal extends TestBase{
 		new_deal_page = home_page.openNewDealForm();
 	}
 	
-	@Test
-	public void editDeal()
+	@Test(dataProvider = "editDeal", dataProviderClass = Functions.DataProviders.class)
+	public void editDeal(String title, String amount, String quantity, String status, String type, String exclude_reports, String new_title)
 	{
-		Deals deal = new Deals();
-		new_deal_page.enterTitle(deal.title);
-		new_deal_page.enterAmount(deal.amount);
-		new_deal_page.enterQuantity(deal.quantity);
-		new_deal_page.setStatus(deal.status);
+		new_deal_page.enterTitle(title);
+		new_deal_page.enterAmount(amount);
+		new_deal_page.enterQuantity(quantity);
+		new_deal_page.setStatus(status);
 		new_deal_page.selectPredictedOrActualCloseDateAs("Predicted");
 		new_deal_page.saveDeal();
 		
@@ -51,7 +49,7 @@ public class EditDeal extends TestBase{
 		
 		open_existing_deal_page.clickEdit();
 		
-		new_deal_page.enterTitle(deal.new_title);
+		new_deal_page.enterTitle(new_title);
 		new_deal_page.selectPredictedOrActualCloseDateAs("Actual");
 		new_deal_page.saveDeal();
 	}

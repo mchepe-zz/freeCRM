@@ -27,22 +27,20 @@ public class EnterNewDeal extends TestBase{
 	{
 		openBrowser();
 		openUrl("homepage");
-		//new_deal_page = new NewDealPage();
-		deal = new Deals();
 		login_page = new LoginPage();
 		home_page = login_page.login(prop.getProperty("admin_usr"), prop.getProperty("admin_pwd"));
 		new_deal_page = home_page.openNewDealForm();
 	}
 	
-	@Test
-	public void enter_new_deal()
+	@Test(dataProvider = "createNewDeal", dataProviderClass = Functions.DataProviders.class)
+	public void enter_new_deal(String title, String amount, String quantity, String type, String status, String exclude_reports)
 	{
-		new_deal_page.enterTitle(deal.title);
-		new_deal_page.enterAmount(deal.amount);
-		new_deal_page.enterQuantity(deal.quantity);
-		new_deal_page.selectType(deal.type);
-		new_deal_page.setStatus(deal.status);
-		new_deal_page.selectExcludeReports();
+		new_deal_page.enterTitle(title);
+		new_deal_page.enterAmount(amount);
+		new_deal_page.enterQuantity(quantity);
+		new_deal_page.selectType(type);
+		new_deal_page.setStatus(status);
+		new_deal_page.selectExcludeReports(exclude_reports);
 		new_deal_page.selectPredictedOrActualCloseDateAs("Predicted");
 		String dealNumber = new_deal_page.dealNoBeforeSave();
 		new_deal_page.saveDeal();

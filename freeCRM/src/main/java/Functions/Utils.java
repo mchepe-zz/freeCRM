@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -18,8 +17,8 @@ public class Utils {
 	static String value;
 	private static XSSFWorkbook wb;
 	private static XSSFSheet sheet;
-	private static XSSFCell Cell;
 	private static XSSFRow Row;
+	static DataFormatter formatter = new DataFormatter();
 	
 	public String readProperty(String path, String property)
 	{
@@ -47,7 +46,6 @@ public class Utils {
 	public String readExcel(String path, String sheetname, int row, int column)
 	{
 		this.filepath = path;
-		DataFormatter formatter = new DataFormatter();
 		try
 		{
 			File file = new File(filepath);
@@ -59,10 +57,12 @@ public class Utils {
 		}
 		catch (FileNotFoundException e)
 		{
+			System.out.println("Unable to read excel file because of below error:");
 			e.printStackTrace();
 		}
 		catch (IOException e) 
 		{
+			System.out.println("Unable to read excel file because of below error:");
 			e.printStackTrace();
 		}
 		return propvalue;
@@ -94,6 +94,7 @@ public class Utils {
 					dataArray[ci][cj] = getCellData(i, j);
 				}
 			}
+			wb.close();
 		}catch(FileNotFoundException ex)
 		{
 			System.out.println("Could not read the Excel sheet. Something may be wrong with the excel path or sheet name.");
@@ -116,11 +117,11 @@ public class Utils {
 	{
 		try
 		{
-			Cell = sheet.getRow(rowNum).getCell(colNum);
-			value = Cell.getStringCellValue();
+			value = formatter.formatCellValue(sheet.getRow(rowNum).getCell(colNum));
 		}
 		catch(Exception ex)
 		{
+			System.out.println("Could not read the Excel sheet.");
 			System.out.println(ex.getMessage());
 		}
 		return value;

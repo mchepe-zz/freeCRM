@@ -73,8 +73,9 @@ public class NewDealPage extends TestBase{
 		quantity.sendKeys(dealQuantity);
 	}
 	
-	public void selectExcludeReports()
+	public void selectExcludeReports(String exclude_rep)
 	{
+		if (exclude_rep.equalsIgnoreCase("true"))
 		exclude_reports.click();
 	}
 	
